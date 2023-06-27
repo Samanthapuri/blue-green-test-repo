@@ -9,7 +9,6 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      zone: {{{ .zone }}}
   template:
     metadata:
       labels:

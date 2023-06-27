@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment-{{{ green }}}
+  name: nginx-deployment-{{{ .zone }}}
   labels:
     app: nginx
 spec:
@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      zone: {{{ zone }}}
+      zone: {{{ .zone }}}
   template:
     metadata:
       labels:
